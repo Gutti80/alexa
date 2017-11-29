@@ -1,18 +1,16 @@
 version: "2"
 services:
-    homebridge:
+    alexa:
         build: alexa
+        image: georgguttmann/alexa
         restart: always
         expose:
-            - "51826"
-            - "8282"
-            - "5353"
+            - "3000"
         ports:
-            - "51826:51826"
-            - "8282:8282"
-            - "5353:5353"
+            - "3000:3000"
         volumes:
-            - ./homebridge/config.json:/root/.homebridge/config.json
+            - ./alexa/alexa-fhem/:/root/alexa-fhem/
+            - ./alexa/config/:/root/.alexa/
         network_mode: host
 
 networks:

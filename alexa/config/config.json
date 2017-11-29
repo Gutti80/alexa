@@ -1,0 +1,21 @@
+{
+    "alexa": {
+        "name": "Alexa TEST",
+        "keyFile": "/root/.alexa/key.pem",
+        "certFile": "/root/.alexa/cert.pem",
+        "nat-pmp": "192.168.0.1",
+        "nat-upnp": false,
+        "applicationId": ["amzn1.ask.skill.2a1c690c-3442-4ce8-b62a-10146cd2f748","amzn1.ask.skill.ab8de800-05fe-4bb6-8f41-29d1c458ac64","amzn1.ask.skill.a5d205f3-07d4-4958-a026-3e2f9bc34327"],
+        "oauthClientID": ["amzn1.application-oa2-client.4e391d0aa9fd461088aa4f5f0c23201e","amzn1.application-oa2-client.4e391d0aa9fd461088aa4f5f0c23201e","amzn1.application-oa2-client.4e391d0aa9fd461088aa4f5f0c23201e"]
+    },
+    
+    "connections": [
+        {
+            "name": "FHEM",
+            "server": "192.168.0.2",
+            "port": "8083",
+	    "auth": {"user": "georg", "pass": "gV49Cs13"},
+            "filter": "room=Alexa"
+        }
+    ]
+}
