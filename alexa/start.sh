@@ -1,4 +1,5 @@
 #!/bin/bash
 
 cd /root/alexa-fhem
-./bin/alexa
+# nohup ./bin/alexa -U /root/.alexa &
+./bin/alexa -U /root/.alexa &

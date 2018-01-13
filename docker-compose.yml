@@ -3,6 +3,7 @@ services:
     alexa:
         build: alexa
         image: georgguttmann/alexa
+        container_name: alexa
         restart: always
         expose:
             - "3000"
@@ -11,7 +12,8 @@ services:
         volumes:
             - ./alexa/alexa-fhem/:/root/alexa-fhem/
             - ./alexa/config/:/root/.alexa/
-        network_mode: host
+        networks:
+            - fhem-network
 
 networks:
     fhem-network:
